@@ -1,0 +1,305 @@
+<!doctype html>
+	<head>
+		<meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="style.css">
+		<script type="text/javascript" src="index.js"></script>
+	</head>
+	<body>
+		<main class="main-section">
+			<h2>HTML, Javascript, CSS Quick Start Guide</h3>
+			<div class="glossary">
+				<div>
+					Essentially every website on the internet is made of the following three components.  Here's a brief overview on what they are and what they do.
+					<ul>
+						<li><strong>HTML</strong>	- Stands for HyperText Markup Language. HTML elements control everything you see on a web page, from text to images, and certain styles of formatting.</li>
+						<li><strong>Javascript</strong>	- A scripting language that is natively supported by HTML and every web browser.  Javascript is used to add functionality and dynamic content to HTML web pages.</li>
+						<li><strong>CSS</strong>	- Stands for Cascading Style Sheet.  CSS is used to add all sorts of styles to the content on a web page.  It can be used to position elements, change the appearance of content, and more.</li>
+					</ul>
+					The instructions that follow will show you how to utilize these three languages to create a web page.
+				</div>
+			</div>
+			<div id="step-1">
+				<div class="step-title">
+					<h4>Create File Structure</h4>
+				</div>
+				<div class="step-content">
+					<p>First, navigate to a place on your computer that you want to store all of these files.  It doesn't matter where, so long as you can find them.  Create a folder to place the files in.</p>
+					<p>Next, create the following three files by right clicking on a blank part of the screen in the folder, selecting "New", and clicking "Text Document".  Delete the current filename and name them the following, do this for each of the three files.
+						<ul>
+							<li><strong>index.html</strong>	- This will house the basic structure and content of your web page.</li>
+							<li><strong>index.js</strong>	- Here you will place code to add functionality to your web page.</li>
+							<li><strong>style.css</strong>	- Contains styles that will make your web page look better.</li>
+						</ul>
+						<p>The filenames are important for each of the files.  What follows the period in the filename determines the filetype, and is vital for anything to work correctly.  We name the html file "index" because browsers look for that specific file as their starting point.  The js and css files can really be named anything, but these names are easy to identify.</p>
+					</p>
+				</div>
+			</div>
+			<div id="step-2">
+				<div class="step-title">
+					<h4>HTML Setup</h4>
+				</div>
+				<div class="step-content">
+					<p>Open your index.html file for editing.</p>
+					<div class="alert">
+						<p><strong>Note</strong> - do not open these files in an advanced word processor such as Microsoft Word, LibreOffice, or Open Office.  They will insert their own formatting and hidden text and mess up your files!  It would be best to use a dedicated development software, but notepad works well, or even better, <a href="https://notepad-plus-plus.org/">Notepad++</a>.</p>
+					</div>
+					
+					Type or copy and paste the following into your html file.
+					<pre>
+						<code>
+&#60!doctype html&#62
+	&#60head&#62
+		
+	&#60/head&#62
+	&#60body&#62
+	
+	&#60/body&#62
+&#60/html&#62
+						</code>
+					</pre>
+					
+					Let's go over this line by line.<br>
+					<ul>
+						<li>The first line,  <code> &#60!doctype html&#62 </code> tells the browser that this is an html document and to interperet it as such.</li>
+						<li>The second line, <code> &#60head&#62 </code> signifies the beginning of the head section of the document.  Generally you dont actually see things that are placed in this section.  It is mostly used for telling the browser where the other parts of your web page are, such as js and css files.</li>
+						<li>On the fourth line, we close the head tag with <code> &#60/head&#62 </code>.  Basically this means that anything after this line is no longer in the head section.</li>
+						<li>On the fifth line, we open the body section of our webpage with <code> &#60body&#62 </code>.  This is usually where all of the content of the web page is placed.</li>
+						<li>On the seventh line, we close our body tag, signifying an end to our content.</li>
+						<li>And finally, on the eighth line, we close our html tag.  This will always be at the end of the file and signifies that it is the end of the page.</li>
+					This is the basic format for almost every web page in existence.  In the next steps, we will add some content to this shell.
+				</div>
+			</div>
+			<div id="step-3">
+				<div class="step-title">
+					<h4>Linking Javascript and CSS in the head section<h5>
+				</div>
+				<div class="step-content">
+					Next we are going to add some code in our head section.  Enter the following between the <code> &#60head&#62 </code> and <code> &#60/head&#62 </code> tags.
+					<pre>
+						<code>
+&#60link rel="stylesheet" href="style.css"&#62
+&#60script type="text/javascript" src="index.js"&#62&#60/script&#62
+						</code>
+					</pre>
+					The first line links our css stylesheet to this html document.  We add two properties to the link tag in this statement with "rel" and "href".  "rel" signifies the type of relationship the target, signified in "href" has to our html document.  Inside the "href" modifier, we enter the path to our css file relative to where the html file is located.  Since they are in the same place, we can just enter the filename, "style.css".<br>
+					Similar to the first line, the second tells tells the browser where it can find our javascript file and also tells it that the file contains scripts.  Instead of putting our javascript in a separate file, we could leave out the "src" tag and place all of our javascript code in between the opening and closing script tags.					
+				</div>
+			</div>
+			<div id="step-4">
+				<div class="step-title">
+					<h4>Adding content to the body</h4>
+				</div>
+				<div class="step-content">
+					We are now ready to add some actual content to our web page.  Keep in mind that since we don't have any CSS or javascript set up yet, this content is not going to look very appealing.<br>
+					First we are going to create a very simple page that is a rite of passage for anyone who has ever written code in anything ever, Hello World.<br>
+					Between your <code> &#60body&#62 </code> and <code> &#60/body&#62 </code> tags, type the following.
+					<pre>
+						<code>
+&#60div class="content" id="hello"&#62
+	Hello World!
+&#60/div&#62
+						</code>
+					</pre>
+					After entering the code above, double click on your html file to open it in your default browser.  You should see a page that says "Hello World!"<br>
+					<div class="note">
+						<p>
+							A div tag defines a division or section of your html document.  It is useful to split your document into sections so you can add formatting to each section individually to make the page appear how you want it to.
+						</p>
+					</div>
+					We are calling the class our div to belongs to "content", and setting its ID to "hello".  You can set both of these on nearly every html element that you can create and they are used to identify the elements on your page so you can selectively apply formatting and scripts.<br>
+					Keep in mind you don't have to set both or even one of them on an element, and in a lot of cases you don't need to anyway.  We will be using both the class and ID selectors in a bit to make our page look a little fancier.<br><br>
+					Inside our div tags, we have our first bit of text content that appears on our page, Hello World!<br>
+					And of course, we close our div with &#60/div&#62. <br>
+				</div>
+			</div>
+			<div id="step-5">
+				<div class="step-title">
+					<h4>Adding a bit of style</h4>
+				</div>
+				<div class="step-content">
+					Let's hop over to our style.css file to improve the appearance of our page.  Go ahead and open it in your text editor.<br>
+					To add styles to our elements, we need to define a few things.  Enter the following in your css file.  
+					<pre>
+						<code>
+body{
+	background: #f2f2f2;
+}
+.content{
+	font-size: 2em;
+	user-select: none;
+}
+#hello{
+	font-family: "Calibri";
+}
+						</code>
+					</pre>
+					When you've done that, refresh the page in your browser, or if you've closed it, open your html file again.  You should see the affects our css rule-set has applied.<br>
+					To break down what we entered above, each css rule is comprised of three parts: the selector, the property, and the value.<br><br>
+					<div class="note">
+						<p>
+							A selector defines the element that we are selecting for the rule to be applied to.  In the css we just typed, this is "body", ".content", and "#hello".
+						</p>
+					</div>
+					We can select pretty much any element that we want to apply a rule to, though depending on how we are applying it, our syntax has to change a little.<br>
+					For native html elements such as "body", or "p" (paragraph), or "a" (hyperlink), we simply type the name of the element.<br>
+					To apply a rule to a class of elements, defined with "class=class-name", we type .class-name.<br>
+					To apply a rule to an element by ID, defiend with "id=element-id", we type #element-id.<br>
+					Everything within the curly braces immediately following the selector will be applied on that selector.<br><br>
+					Next we define the property of the element that we want to change.  Here we have set our properties to background, font-size, and font-family.<br>
+					Background will change the background color, size will change the font size, and font-family will change the font.<br><br>
+					After that, we set the values of our properties.  For the background color, I've chosen a sort of gray-ish color that is easier on the eyes than the pure white we had before.  This color is set in a hexadecimal format, and you can learn more about those <a href="http://htmlcolorcodes.com/">here</a><br>
+					We set the size of the text to 2em.  An "em" is a unit in the field of typography, and the number is relative to the current point size of the font.  Essentially, 2em is twice as large as the original text size.<br>
+					The user-select property will come into play when we get into our Javascript section, but basically this prevents the user from selecting any elements inside our content.<br>
+					We also changed the font-family of the text to Calibri because I think it looks nicer.<br><br>
+					Keep in mind that there are more advanced ways of selecting and applying css rules to elements, but for the purposes of this guide, this is all we need to know.<br><br>
+				</div>
+			</div>
+			<div id="step-6">
+				<div class="step-title">
+					<h4>Javascript and You!</h4>
+				</div>
+				<div class="step-content">
+					Now we're going to add some javascript to add a bit of functionality to our new web page.  Open your index.js file in your text editor and add the following code.
+					<pre>
+						<code>
+function init(){
+	var hello = document.getElementById("hello");
+	hello.style.margin = "40px 40px 40px 40px";
+	hello.style.width = "300px";
+	hello.style.height = "300px";
+	hello.style.border = "solid";
+	hello.style.background = "#F1A9A0";
+	
+	var cDiv = document.createElement('div');
+	cDiv.id = "count";
+	cDiv.style.cssText = 'position:absolute;width:100%;textAlign:center;';
+	cDiv.innerHTML = "Count: 0";
+	document.body.appendChild(cDiv);
+}
+
+function color(){
+	var cDiv = document.getElementById("hello");
+	cDiv.style.background = "#" + ('00000'+(Math.random()*(1<<24)|0).toString(16)).slice(-6);
+	increment();
+}
+
+function increment(){
+	increment.count = ++increment.count || 1;
+	var cDiv = document.getElementById("count");
+	cDiv.innerHTML = "Count: " + increment.count;
+}
+						</code>
+					</pre>
+					What we have defined here are three different javascript functions named init, color, and increment.  I'll briefly go over what each does, and then we can show you how to use them.<br>
+					The <code> init()</code> function is designed to be called when the page loads.  It does a couple of things.<br>
+					First it calls the function <code> getElementById()</code> on our document, and passes the argument "hello" to it.<br>
+					The getElementById function returns an element whose ID is matches what we passed to the function.  In this case it will return our "hello" element that contains our "Hello World!" text.<br>
+					Then there are several lines that apply different css rules to that element.  We change the margins, the width and height, give it a border, and apply a new background color.<br>
+					After that, we create a brand new element by calling the <code> createElement()</code> function and passing "div" as its argument.  This will create a new div element which we will then append to our document by calling the <code>appendChild()</code> function.<br>
+					First though, we give our new element an id of "count", which will come into play in another one of our functions.<br>
+					We also apply a bit of css on this element, similar to how we applied it to our "hello" element, but with a different sytax style.  We set its "innerHTML" to be whatever it is that we want to go inside this new element, in this case it is "Count: 0";<br><br>
+					Our next function, <code>color()</code>, is designed to apply a random background color to our "hello" element.<br>
+					First we get the element by calling <code>getElementById()</code> again, and then we add a background property to it.<br>
+					This code section, <code>"#" + ('00000'+(Math.random()*(1<<24)|0).toString(16)).slice(-6)</code> generates a random six digit number, and converts it into a hexadecimal string that can be set as the background color of our element.<br>
+					And finally in this function, we call our third function, <code>increment()</code>.<br><br>
+					Our last function, <code>increment()</code>, contains a static variable called "count", that goes up by one each time this function is called.<br>
+					We then get the "count" element that was created in our init function, and set its innerHTML property to update along with our count variable each time this function is called.
+				</div>
+			</div>
+			<div id="step-7">
+				<div class="step-title">
+					<h4>Calling our Javascript Functions</h4>
+				</div>
+				<div class="step-content">
+					The final step we have to do is to add the code to our HTML file that tells the Javascript functions we just defined to run.  Open your html file again, and do the following.<br>
+					Change the opening body tag to this:
+					<pre>
+						<code>
+&#60body onload=init(); onclick=color();&#62
+						</code>
+					</pre>
+					This line does two things.  It tells the page that when it loads, it should call our init function, and it also says that when this element, the body, is clicked, it should call our "color" function.<br>
+					Once you have that entered, go ahead and refresh or reopen your html page and check it out!  Click on your "hello" element (the big colored square), and notice how it changes color and how the counter at the bottom goes up.<br>
+					<div class="alert">
+						<p>
+							If this is not working properly, verify that each of your files matches the code below.  You can see the site in action <a href="hello/index.html">here</a>.
+						</p>
+					</div>
+					In index.html:
+					<pre>
+						<code>
+&#60!doctype html&#62
+	&#60head&#62
+		&#60link rel="stylesheet" href="style.css"&#62
+		&#60script type="text/javascript" src="index.js"&#62&#60/script&#62
+	&#60/head&#62
+	&#60body onload=init(); onclick=color();&#62
+		&#60div class="content" id="hello"&#62
+			Hello World!
+		&#60/div&#62
+	&#60/body&#62
+&#60/html&#62
+						</code>
+					</pre>
+					In index.js:
+					<pre>
+						<code>
+function color(){
+	console.log("hello");
+	increment();
+	var cDiv = document.getElementById("hello");
+	cDiv.style.background = "#" + ('00000'+(Math.random()*(1<<24)|0).toString(16)).slice(-6);
+}
+
+function init(){
+	var hello = document.getElementById("hello");
+	hello.style.margin = "40px 40px 40px 40px";
+	hello.style.width = "300px";
+	hello.style.height = "300px";
+	hello.style.border = "solid";
+	hello.style.background = "#F1A9A0";
+	
+	var cDiv = document.createElement('div');
+	cDiv.id = "count";
+	cDiv.style.cssText = 'position:absolute;width:100%;textAlign:center;';
+	cDiv.innerHTML = "Count: 0";
+	document.body.appendChild(cDiv);
+}
+
+function increment(){
+	increment.count = ++increment.count || 1;
+	var cDiv = document.getElementById("count");
+	cDiv.innerHTML = "Count: " + increment.count;
+}
+						</code>
+					</pre>
+					In style.css:
+					<pre>
+						<code>
+body{
+	background: #f2f2f2;
+}
+.content{
+	font-size: 2em;
+	user-select: none;
+}
+#hello{
+	font-family: "Calibri";
+}
+
+						</code>
+					</pre>
+					Congratulations, you've just created a functioning web application!<br>
+					If you want to learn more, there are many excellent resources available for free.  <a href="https://www.w3schools.com/">w3schools</a> has almost everything you could want to know about web development and is a great reference resource.  There are also wonderful online courses such as <a href="https://www.codecademy.com/">Code Academy</a> and <a href="https://www.udacity.com">Udacity</a>.  Check them out if you're interested.
+				</div>
+			</div>
+		</main>
+	</body>
+	<footer>
+		<p>Tanner Cornejo, 2017</p>
+		<p>Contact: <a href="mailto:tannercornejo@delta.edu">tannercornejo@delta.edu</a></p>
+	</footer>
+</html>
