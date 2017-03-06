@@ -74,7 +74,7 @@
 			</div>
 			<div id="step-3">
 				<div class="step-title">
-					<h4>Linking Javascript and CSS in the head section<h5>
+					<h4>Linking Javascript and CSS in the head section<h4>
 				</div>
 				<div class="step-content">
 					Next we are going to add some code in our head section.  Enter the following between the <code> &#60head&#62 </code> and <code> &#60/head&#62 </code> tags.
@@ -84,8 +84,8 @@
 &#60script type="text/javascript" src="index.js"&#62&#60/script&#62
 						</code>
 					</pre>
-					The first line links our css stylesheet to this html document.  We add two properties to the link tag in this statement with "rel" and "href".  "rel" signifies the type of relationship the target, signified in "href" has to our html document.  Inside the "href" modifier, we enter the path to our css file relative to where the html file is located.  Since they are in the same place, we can just enter the filename, "style.css".<br>
-					Similar to the first line, the second tells tells the browser where it can find our javascript file and also tells it that the file contains scripts.  Instead of putting our javascript in a separate file, we could leave out the "src" tag and place all of our javascript code in between the opening and closing script tags.					
+					<p>The first line links our css stylesheet to this html document.  We add two properties to the link tag in this statement with "rel" and "href".  "rel" signifies the type of relationship the target, signified in "href" has to our html document.  Inside the "href" modifier, we enter the path to our css file relative to where the html file is located.  Since they are in the same place, we can just enter the filename, "style.css".<br>
+					Similar to the first line, the second tells tells the browser where it can find our javascript file and also tells it that the file contains scripts.  Instead of putting our javascript in a separate file, we could leave out the "src" tag and place all of our javascript code in between the opening and closing script tags.</p>
 				</div>
 			</div>
 			<div id="step-4">
@@ -104,15 +104,16 @@
 						</code>
 					</pre>
 					After entering the code above, double click on your html file to open it in your default browser.  You should see a page that says "Hello World!"<br>
+					<img src="img/hello.png"><p class="img-sub">This should look very similar to your page.</p></img>
 					<div class="note">
 						<p>
 							A div tag defines a division or section of your html document.  It is useful to split your document into sections so you can add formatting to each section individually to make the page appear how you want it to.
 						</p>
 					</div>
-					We are calling the class our div to belongs to "content", and setting its ID to "hello".  You can set both of these on nearly every html element that you can create and they are used to identify the elements on your page so you can selectively apply formatting and scripts.<br>
+					<p>We are calling the class our div to belongs to "content", and setting its ID to "hello".  You can set both of these on nearly every html element that you can create and they are used to identify the elements on your page so you can selectively apply formatting and scripts.<br>
 					Keep in mind you don't have to set both or even one of them on an element, and in a lot of cases you don't need to anyway.  We will be using both the class and ID selectors in a bit to make our page look a little fancier.<br><br>
 					Inside our div tags, we have our first bit of text content that appears on our page, Hello World!<br>
-					And of course, we close our div with &#60/div&#62. <br>
+					And of course, we close our div with &#60/div&#62. <br></p>
 				</div>
 			</div>
 			<div id="step-5">
@@ -137,7 +138,8 @@ body{
 						</code>
 					</pre>
 					When you've done that, refresh the page in your browser, or if you've closed it, open your html file again.  You should see the affects our css rule-set has applied.<br>
-					To break down what we entered above, each css rule is comprised of three parts: the selector, the property, and the value.<br><br>
+					To break down what we entered above, each css rule is comprised of three parts: the selector, the property, and the value.<br>
+					<img src="img/css.png"><p class="img-sub">After updating your css, you should see something similar to this.</p></img>
 					<div class="note">
 						<p>
 							A selector defines the element that we are selecting for the rule to be applied to.  In the css we just typed, this is "body", ".content", and "#hello".
@@ -223,6 +225,7 @@ function increment(){
 					</pre>
 					This line does two things.  It tells the page that when it loads, it should call our init function, and it also says that when this element, the body, is clicked, it should call our "color" function.<br>
 					Once you have that entered, go ahead and refresh or reopen your html page and check it out!  Click on your "hello" element (the big colored square), and notice how it changes color and how the counter at the bottom goes up.<br>
+					<img src="img/full.png"><p class="img-sub">You should see a page similar to this.</p></img>
 					<div class="alert">
 						<p>
 							If this is not working properly, verify that each of your files matches the code below.  You can see the site in action <a href="hello/index.html">here</a>.

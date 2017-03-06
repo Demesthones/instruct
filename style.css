@@ -9,6 +9,8 @@ body{
 }
 .step-title > h4{
 	margin-bottom: 0px;
+	-webkit-margin-after: 0px;
+	-webkit-margin-before: 0px;
 }
 p{
 	margin-top: 0px;
@@ -77,4 +79,18 @@ code {
     display: inline; 
     color: #555555;
     background: #f4f4f4;
+}
+img{
+	border: solid;
+	border-width: 1px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	font-size: 70%;
+}
+.img-sub{
+	width: 30em;
+	margin-left: auto;
+	margin-right: auto;
 }
